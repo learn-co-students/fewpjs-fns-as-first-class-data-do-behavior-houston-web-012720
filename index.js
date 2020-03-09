@@ -7,5 +7,19 @@ function handleClick(e) {
 
 /* End Given Code, don't edit above here...*/
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
+function greet(time) {
+  var time = time.split(":")
+  var realtime = parseInt(time);
+  debugger
+  if (realtime < 12) {
+    return "Good Morning";
+  } else if (realtime >= 12 && realtime < 18) {
+    return "Good Afternoon";
+  } else {
+    return "Good Evening";
+  };
+};
+
+function displayMessage(msg) {
+  document.getElementById("greeting").innerText = msg
+};
